@@ -1,0 +1,17 @@
+C:\Users\halil\Desktop\myApp\Api\Buisness\bin\Debug\net8.0\Buisness.deps.json
+C:\Users\halil\Desktop\myApp\Api\Buisness\bin\Debug\net8.0\Buisness.dll
+C:\Users\halil\Desktop\myApp\Api\Buisness\bin\Debug\net8.0\Buisness.pdb
+C:\Users\halil\Desktop\myApp\Api\Buisness\obj\Debug\net8.0\Buisness.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\halil\Desktop\myApp\Api\Buisness\obj\Debug\net8.0\Buisness.AssemblyInfoInputs.cache
+C:\Users\halil\Desktop\myApp\Api\Buisness\obj\Debug\net8.0\Buisness.AssemblyInfo.cs
+C:\Users\halil\Desktop\myApp\Api\Buisness\obj\Debug\net8.0\Buisness.csproj.CoreCompileInputs.cache
+C:\Users\halil\Desktop\myApp\Api\Buisness\obj\Debug\net8.0\Buisness.dll
+C:\Users\halil\Desktop\myApp\Api\Buisness\obj\Debug\net8.0\refint\Buisness.dll
+C:\Users\halil\Desktop\myApp\Api\Buisness\obj\Debug\net8.0\Buisness.pdb
+C:\Users\halil\Desktop\myApp\Api\Buisness\obj\Debug\net8.0\ref\Buisness.dll
+C:\Users\halil\Desktop\myApp\Api\Buisness\bin\Debug\net8.0\Core.dll
+C:\Users\halil\Desktop\myApp\Api\Buisness\bin\Debug\net8.0\DataAccess.dll
+C:\Users\halil\Desktop\myApp\Api\Buisness\bin\Debug\net8.0\Core.pdb
+C:\Users\halil\Desktop\myApp\Api\Buisness\bin\Debug\net8.0\DataAccess.pdb
+C:\Users\halil\Desktop\myApp\Api\Buisness\obj\Debug\net8.0\Buisness.csproj.AssemblyReference.cache
+C:\Users\halil\Desktop\myApp\Api\Buisness\obj\Debug\net8.0\Buisness.csproj.Up2Date
