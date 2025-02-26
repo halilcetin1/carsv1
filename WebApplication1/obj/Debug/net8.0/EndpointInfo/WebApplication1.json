@@ -66,6 +66,195 @@
           }
         }
       }
+    },
+    "/api/Vehicles/create": {
+      "post": {
+        "tags": [
+          "Vehicles"
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "BrandAndModel": {
+                    "type": "string"
+                  },
+                  "ManifacturingYear": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "Color": {
+                    "type": "string"
+                  },
+                  "EngineCapacity": {
+                    "type": "number",
+                    "format": "double"
+                  },
+                  "Price": {
+                    "type": "number",
+                    "format": "double"
+                  },
+                  "Millage": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "PlateNumber": {
+                    "type": "string"
+                  },
+                  "AuctionPrice": {
+                    "type": "number",
+                    "format": "double"
+                  },
+                  "AdditionalInformation": {
+                    "type": "string"
+                  },
+                  "StartTime": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "EndTime": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "IsActive": {
+                    "type": "boolean"
+                  },
+                  "Image": {
+                    "type": "string"
+                  },
+                  "SellerId": {
+                    "type": "string"
+                  },
+                  "File": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              },
+              "encoding": {
+                "BrandAndModel": {
+                  "style": "form"
+                },
+                "ManifacturingYear": {
+                  "style": "form"
+                },
+                "Color": {
+                  "style": "form"
+                },
+                "EngineCapacity": {
+                  "style": "form"
+                },
+                "Price": {
+                  "style": "form"
+                },
+                "Millage": {
+                  "style": "form"
+                },
+                "PlateNumber": {
+                  "style": "form"
+                },
+                "AuctionPrice": {
+                  "style": "form"
+                },
+                "AdditionalInformation": {
+                  "style": "form"
+                },
+                "StartTime": {
+                  "style": "form"
+                },
+                "EndTime": {
+                  "style": "form"
+                },
+                "IsActive": {
+                  "style": "form"
+                },
+                "Image": {
+                  "style": "form"
+                },
+                "SellerId": {
+                  "style": "form"
+                },
+                "File": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Vehicles/getAllVehicles": {
+      "get": {
+        "tags": [
+          "Vehicles"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Vehicles/{vehicleId}": {
+      "delete": {
+        "tags": [
+          "Vehicles"
+        ],
+        "parameters": [
+          {
+            "name": "vehicleId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Vehicles/update": {
+      "put": {
+        "tags": [
+          "Vehicles"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateVehicleDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateVehicleDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateVehicleDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
     }
   },
   "components": {
@@ -108,6 +297,59 @@
             "nullable": true
           },
           "password": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateVehicleDto": {
+        "type": "object",
+        "properties": {
+          "brandAndModel": {
+            "type": "string",
+            "nullable": true
+          },
+          "manifacturingYear": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "color": {
+            "type": "string",
+            "nullable": true
+          },
+          "engineCapacity": {
+            "type": "number",
+            "format": "double"
+          },
+          "price": {
+            "type": "number",
+            "format": "double"
+          },
+          "millage": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "plateNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "auctionPrice": {
+            "type": "number",
+            "format": "double"
+          },
+          "additionalInformation": {
+            "type": "string",
+            "nullable": true
+          },
+          "endTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "isActive": {
+            "type": "boolean"
+          },
+          "image": {
             "type": "string",
             "nullable": true
           }

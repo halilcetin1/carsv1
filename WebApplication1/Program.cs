@@ -6,6 +6,7 @@ using DataAccess.Context;
 using DataAccess.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using WebApplication1.Extensions;
 
 
 
@@ -15,20 +16,14 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddDbContext<ApplicationDbContext>(options =>
-
-{
-    var version = new MySqlServerVersion(new Version(8,0,33));
-    options.UseMySql(builder.Configuration.GetConnectionString("mysql"),version);
-
-});
 
 
-builder.Services.AddIdentity<ApplicationUser, IdentityRole>().AddEntityFrameworkStores<ApplicationDbContext>();
+builder.Services.AddPersistenceLayer(builder.Configuration);
+builder.Services.AddApplicationLayer(builder.Configuration);
+builder.Services.AddJwtAuth(builder.Configuration);
 builder.Services.AddSwaggerGen();
-builder.Services.AddScoped<IUserService, UserService>();
-builder.Services.AddScoped(typeof(ApiResponse));
-builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
+
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 builder.Services.AddEndpointsApiExplorer();
 

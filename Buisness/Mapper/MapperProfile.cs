@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using AutoMapper;
 using Buisness.Dtos;
+using Core.Models;
+using DataAccess.Domain;
 using DataAccess.Models;
 
 namespace Core.Mapper
@@ -14,6 +16,12 @@ namespace Core.Mapper
         public MapperProfile()
         {
             CreateMap<ApplicationUser, RegisterRequestDto>().ReverseMap();
+            CreateMap<Vehicle, CreateVehicleDto>().ReverseMap();
+            CreateMap<Vehicle, UpdateVehicleDto>().ReverseMap();
+            CreateMap<Bid, CreateBidDto>().ReverseMap();
+            CreateMap<Bid, UpdateBidDto>().ReverseMap();
+
+
         }
     }
 }

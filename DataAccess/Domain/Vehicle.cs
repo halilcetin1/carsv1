@@ -21,13 +21,13 @@ namespace DataAccess.Domain
         public string PlateNumber { get; set; }
         public double AuctionPrice { get; set; }
         public string AdditionalInformation { get; set; }
-        public  DateTime StartTime   { get; set; }
+        public DateTime StartTime { get; set; } = DateTime.UtcNow;
         public DateTime EndTime { get; set; }
         public bool IsActive { get; set; }
         public string Image { get; set; }
-        public int SellerId { get; set; }
+        public string SellerId { get; set; }
         public ApplicationUser  Seller { get; set; }
-        public ICollection<Bid> MyProperty { get; set; }
+        public ICollection<Bid> Bids { get; set; }
 
     }
 }

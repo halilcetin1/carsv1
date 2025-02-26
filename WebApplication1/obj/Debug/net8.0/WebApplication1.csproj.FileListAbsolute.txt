@@ -121,4 +121,4 @@ C:\Users\halil\Desktop\myApp\Api\WebApplication1\bin\Debug\net8.0\Buisness.dll
 C:\Users\halil\Desktop\myApp\Api\WebApplication1\bin\Debug\net8.0\Core.dll
 C:\Users\halil\Desktop\myApp\Api\WebApplication1\bin\Debug\net8.0\Buisness.pdb
 C:\Users\halil\Desktop\myApp\Api\WebApplication1\bin\Debug\net8.0\Core.pdb
-C:\Users\halil\Desktop\myApp\Api\WebApplication1\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\halil\Desktop\myApp\Api\WebApplication1\obj\Debug\net8.0\WebApplication1.sourcelink.json

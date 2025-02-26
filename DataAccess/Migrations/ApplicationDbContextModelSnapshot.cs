@@ -35,10 +35,7 @@ namespace DataAccess.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("UserId1")
+                    b.Property<string>("UserId")
                         .IsRequired()
                         .HasColumnType("varchar(255)");
 
@@ -47,7 +44,7 @@ namespace DataAccess.Migrations
 
                     b.HasKey("BidId");
 
-                    b.HasIndex("UserId1");
+                    b.HasIndex("UserId");
 
                     b.HasIndex("VehicleId");
 
@@ -66,10 +63,7 @@ namespace DataAccess.Migrations
                     b.Property<DateTime>("PayDate")
                         .HasColumnType("datetime(6)");
 
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("UserId1")
+                    b.Property<string>("UserId")
                         .IsRequired()
                         .HasColumnType("varchar(255)");
 
@@ -78,7 +72,7 @@ namespace DataAccess.Migrations
 
                     b.HasKey("PaymentId");
 
-                    b.HasIndex("UserId1");
+                    b.HasIndex("UserId");
 
                     b.HasIndex("VehicleId");
 
@@ -132,10 +126,7 @@ namespace DataAccess.Migrations
                     b.Property<double>("Price")
                         .HasColumnType("double");
 
-                    b.Property<int>("SellerId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("SellerId1")
+                    b.Property<string>("SellerId")
                         .IsRequired()
                         .HasColumnType("varchar(255)");
 
@@ -144,7 +135,7 @@ namespace DataAccess.Migrations
 
                     b.HasKey("VehicleId");
 
-                    b.HasIndex("SellerId1");
+                    b.HasIndex("SellerId");
 
                     b.ToTable("Vehicles");
                 });
@@ -356,12 +347,12 @@ namespace DataAccess.Migrations
                 {
                     b.HasOne("DataAccess.Models.ApplicationUser", "User")
                         .WithMany("Bids")
-                        .HasForeignKey("UserId1")
+                        .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("DataAccess.Domain.Vehicle", "Vehicle")
-                        .WithMany("MyProperty")
+                        .WithMany("Bids")
                         .HasForeignKey("VehicleId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -375,7 +366,7 @@ namespace DataAccess.Migrations
                 {
                     b.HasOne("DataAccess.Models.ApplicationUser", "User")
                         .WithMany("PaymentHistories")
-                        .HasForeignKey("UserId1")
+                        .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -394,7 +385,7 @@ namespace DataAccess.Migrations
                 {
                     b.HasOne("DataAccess.Models.ApplicationUser", "Seller")
                         .WithMany("Vehicles")
-                        .HasForeignKey("SellerId1")
+                        .HasForeignKey("SellerId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -454,7 +445,7 @@ namespace DataAccess.Migrations
 
             modelBuilder.Entity("DataAccess.Domain.Vehicle", b =>
                 {
-                    b.Navigation("MyProperty");
+                    b.Navigation("Bids");
                 });
 
             modelBuilder.Entity("DataAccess.Models.ApplicationUser", b =>

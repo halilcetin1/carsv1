@@ -30,5 +30,138 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApplication1.Controllers.VehiclesController",
+    "Method": "DeleteVehicle",
+    "RelativePath": "api/Vehicles/{vehicleId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "vehicleId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApplication1.Controllers.VehiclesController",
+    "Method": "CreateVehicle",
+    "RelativePath": "api/Vehicles/create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "BrandAndModel",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ManifacturingYear",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Color",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "EngineCapacity",
+        "Type": "System.Double",
+        "IsRequired": false
+      },
+      {
+        "Name": "Price",
+        "Type": "System.Double",
+        "IsRequired": false
+      },
+      {
+        "Name": "Millage",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "PlateNumber",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "AuctionPrice",
+        "Type": "System.Double",
+        "IsRequired": false
+      },
+      {
+        "Name": "AdditionalInformation",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "StartTime",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "EndTime",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "IsActive",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "Image",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "SellerId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "File",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApplication1.Controllers.VehiclesController",
+    "Method": "GetAllVehicles",
+    "RelativePath": "api/Vehicles/getAllVehicles",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApplication1.Controllers.VehiclesController",
+    "Method": "UpdateVehicles",
+    "RelativePath": "api/Vehicles/update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "vehicleId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "model",
+        "Type": "Core.Models.UpdateVehicleDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   }
 ]
